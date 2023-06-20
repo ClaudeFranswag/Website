@@ -2,18 +2,31 @@
 <html lang="en">
 <title>Click</title>
 <head>
-    
+    <style>
+        .button {
+          background-color: #515152;
+          color: #eb6c1a;
+          padding: 1% 2%;
+          text-align: center;
+          font-size: 32px;
+          cursor: pointer;
+          border-width: 4px;
+          margin: 0% 44%;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="doSomething()" 
-        style="background-color: #515152;
-        color: #eb6c1a">
+    <button onclick="doSomething()" class="button">
         Click !
     </button>
     <p id="count" align="center"></p>
     <script>
+        var sound = new Audio("vine-boom.mp3");
+        
         function doSomething(){
-            document.getElementById("count").innerHTML = "<img src=\"https://th.bing.com/th/id/OIP.LZWZNgdAn-88Xl1sOTWxnQHaHQ?pid=ImgDet&rs=1\"  width=\"720\" height=\"706\">"
+            document.getElementById("count").innerHTML = "<img src=\"https://th.bing.com/th/id/OIP.LZWZNgdAn-88Xl1sOTWxnQHaHQ?pid=ImgDet&rs=1\"  width=\"720\" height=\"706\">";
+            
+            sound.play()
         }
     </script>
 </body>
