@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <p>{{e-mail}}</p>
+    <p id="e-mail"></p>
+    <script>
+        var data = window.location.search;
+        var params = new URLSearchParams(data);
+        var email = params.get("email")
+        document.getElementById("e-mail").innerHTML = email
+    </script>
 </body>
 </html>
